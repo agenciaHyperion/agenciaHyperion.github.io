@@ -12,6 +12,7 @@ body{
     margin: 0;
     font-family: var(--font);
     background-color: var(--clr-black);
+    user-select: none;
 }
 
 :root {
