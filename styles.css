@@ -1,6 +1,8 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 *, *:before, *:after {
