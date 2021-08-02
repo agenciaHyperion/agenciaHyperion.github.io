@@ -136,7 +136,7 @@ main{
     justify-content: space-between;
     align-items: flex-start;
     
-    border-top: 4px solid var(--clr-yellow);
+    /* border-top: 4px solid var(--clr-yellow); */
     background-color: var(--clr-black);
 }
 
@@ -170,43 +170,6 @@ main{
     height: 15px;
 }
 
-.footer .direccion .btn-container{
-    display: flex;
-    align-items: center;
-    color: var(--clr-yellow);
-    font-weight: 700;
-    margin-top: 1.5em;
-    text-decoration: none;
-}
-
-.footer .direccion .btn-container img{
-    box-sizing: content-box;
-    padding: .3em;
-    border: 2px solid var(--clr-yellow);
-    border-radius: 50%;
-    margin-left: .7em;
-}
-
-/* footer redes antiguo
-.footer .redes .logotipos{
-    display: flex;
-    justify-content: center;
-}
-
-.footer .redes .logotipos a img{
-    width: 40px;
-    height: 40px;
-}
-
-.footer .redes h4{
-    margin: 0;
-    margin-bottom: 1em;
-    font-size: 1.4rem;
-    text-align: center;
-}
-*/
-
-/* footer redes nuevo */
 .footer .logotipos{
     display: flex;
     justify-content: center;
@@ -265,18 +228,6 @@ main{
     background-image: linear-gradient(to right, #f6b918, #f6b815, #f5b711, #f5b60d, #f5b508, #f6b812, #f6bb1a, #f7be20, #f9c62f, #face3b, #fcd547, #fedd53);
 }
 
-/*
-.footer .logo{
-    display: flex;
-}
-
-.footer h2{
-    margin: 0;
-    padding: 0;
-    font-size: 4rem;
-    font-weight: 700;
-}*/
-
 .banner{
     background-color: var(--clr-yellow);
     background-color: var(--clr-yellow);
@@ -296,17 +247,32 @@ main{
     background: white;
     color: black;
     padding: 2em;
+    display: flex;
+    justify-content: space-between
 }
 
-.about-us h2{
+.about-us img{
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 8em;
+}
+
+.about-us .about-us-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us .about-us-text h2{
     margin: 0;
     margin-bottom: 1em;
     font-size: 4rem;
 }
 
-.about-us p{
+.about-us .about-us-text p{
     margin: 0;
     font-size: 2rem;
+    width: 500px;
 }
 
 .servicios{
@@ -379,6 +345,34 @@ main{
 .about-agencia .logo img{
     width: 25px;
     height: 25px;
+}
+
+.contacto{
+    background-color: var(--clr-yellow-light);
+    color: black;    
+    padding: 3em 0;
+    margin-top: 4em;
+}
+
+.contacto h2{
+    margin: 0;
+    text-align: center;
+    font-size: 4.625rem;
+    letter-spacing: 0em;
+    margin-bottom: .5em;
+}
+
+.contacto p{
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.contacto p span a{
+    text-decoration: none;
+    cursor: none;
+    font-weight: bold;
+    color: #1b62e6;
 }
 
 .whatsapp-popup{
@@ -548,6 +542,26 @@ main{
 
     .servicios .servicios-cards-container{
         flex-direction: column;
+    }
+
+    .about-us{
+        flex-direction: column-reverse;
+    }
+
+    .about-us img{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-bottom: 3em;
+    }
+
+    .about-us .about-us-text h2{
+        margin-bottom: .5em;
+    }
+
+    .about-us .about-us-text p{
+        width: fit-content;
+        margin-bottom: 1em;
     }
 
 }
