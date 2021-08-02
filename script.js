@@ -20,3 +20,13 @@ function toggleHamburgerMenu() {
     hamburgerMenu.style.display = 'flex';
     return
 }
+
+for (let x = 0; x < hamburgerMenu.children[0].children.length; x++) {
+    let item = hamburgerMenu.children[0].children[x].children[0];
+    let nodeName = item.nodeName;
+    if (nodeName == 'A') {
+        item.addEventListener('click', () => {
+            toggleHamburgerMenu();
+        })
+    }
+}
