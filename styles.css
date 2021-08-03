@@ -253,9 +253,9 @@ body{
     background-color: var(--clr-yellow);
     background-color: var(--clr-yellow);
     background-image: linear-gradient(to left, #f6b918, #f6b815, #f5b711, #f5b60d, #f5b508, #f6b812, #f6bb1a, #f7be20, #f9c62f, #face3b, #fcd547, #fedd53);
-    height: 15em;
+    height: fit-content;
     padding: 2em;
-    padding-top: 132px;
+    padding-top: 12em;
 } 
 
 .banner p{
