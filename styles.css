@@ -1,0 +1,638 @@
+html {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+    background-color: var(--clr-black);
+
+    -webkit-touch-callout:none; /* iOS Safari */
+    -webkit-user-select:none;   /* Chrome/Safari/Opera */
+    -khtml-user-select:none;    /* Konqueror */
+    -moz-user-select:none;      /* Firefox */
+    -ms-user-select:none;       /* Internet Explorer/Edge */
+    user-select:none;           /* Non-prefixed version */
+}
+
+:root {
+    --clr-navbar: #131518;
+    --clr-black: #1e2328;
+    --clr-black-medium: #2a2e35;
+    --clr-black-light: #3b3f46;
+    --clr-yellow: #f5a302;
+    --clr-yellow-medium: #f5b301;
+    --clr-yellow-light: #fedd53;
+
+    --font: 'Oswald', sans-serif;
+}
+
+.link{
+    cursor: pointer;
+}
+
+.link:hover{
+    opacity: .9;
+}
+
+.anchor{
+    position: absolute;
+    top: -149px;
+    left: 0;
+}
+
+.relative{
+    position: relative;
+}
+
+.logo{
+    display: flex;
+    align-items: baseline
+}
+
+.navbar{
+    padding: 1em;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    transition:all 200ms ease-out;
+    background-color: var(--clr-navbar);
+}
+
+.logo{  
+    display: flex;
+    align-items: baseline;
+}
+.logo h2{
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .navbar-btn{
+    display: flex;
+}
+
+.navbar .navbar-btn img{
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .logo{
+    display: flex;
+    align-items: baseline;
+}
+
+.navbar .logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.navbar .items{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.navbar .items a{
+    text-decoration: none;
+    font-family: var(--font);
+    font-weight: 200;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0px .5em;
+}
+
+.navbar .items a:hover{
+    color: var(--clr-yellow);
+}
+
+.navbar .items .telefono{
+    margin-left: 6em;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .items .telefono img{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.navbar .items .telefono p{
+    font-family: var(--font);
+    font-weight: 200;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+    margin-left: .3em;
+}
+
+.footer{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    /* border-top: 4px solid var(--clr-yellow); */
+    background-color: var(--clr-black);
+}
+
+.footer .direccion{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .direccion p{
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.footer .direccion h4{
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.footer .direccion a{
+    text-decoration: none;
+    color: white;
+    font-family: var(--font);
+    font-weight: 200;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: .7em;
+}
+
+.footer .direccion a img{
+    width: 15px;
+    height: 15px;
+}
+
+.footer .logotipos{
+    display: flex;
+    justify-content: center;
+}
+
+.footer .logotipos a img{
+    width: 25px;
+    height: 25px;
+}
+
+.footer .logo{
+    margin-left: 1em;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer .logo h2{
+    font-size: 2rem;
+}
+
+.footer .logo img{
+    width: 50px;
+    height: 50px;
+}
+
+/* footer redes nuevo */
+
+.footer .logotipos img{
+    margin: 0px 1em;
+}
+
+.footer .presupuesto-btn{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer .presupuesto-btn a{
+    text-decoration: none;
+    color: var(--clr-black);
+    font-family: var(--font);
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    outline: none;
+    cursor: pointer;
+
+    border-radius: 5px;
+    border: none;
+    padding: 1em;
+    background-color: var(--clr-yellow);
+    background-image: linear-gradient(to right, #f6b918, #f6b815, #f5b711, #f5b60d, #f5b508, #f6b812, #f6bb1a, #f7be20, #f9c62f, #face3b, #fcd547, #fedd53);
+}
+
+.banner{
+    background-color: var(--clr-yellow);
+    background-color: var(--clr-yellow);
+    background-image: linear-gradient(to left, #f6b918, #f6b815, #f5b711, #f5b60d, #f5b508, #f6b812, #f6bb1a, #f7be20, #f9c62f, #face3b, #fcd547, #fedd53);
+    height: 15em;
+    padding: 2em;
+    padding-top: 132px;
+} 
+
+.banner p{
+    margin: 0;
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--clr-black);
+}
+
+.about-us{
+    background: var(--clr-black-medium);
+    color: white;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between
+}
+
+.about-us img{
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    /* margin-left: 8em; */
+}
+
+.about-us .about-us-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us .about-us-text h2{
+    margin: 0;
+    margin-bottom: 1em;
+    font-size: 4rem;
+}
+
+.about-us .about-us-text p{
+    margin: 0;
+    font-size: 2rem;
+    max-width: 500px;
+}
+
+.servicios{
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.servicios .servicios-title{
+    display: flex;
+    justify-content: center;
+}
+
+.servicios .servicios-title h2{
+    font-size: 4rem;
+}
+
+.servicios .servicios-cards-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.servicios .servicio-card{
+    color: var(--clr-black);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-image: linear-gradient(to right top, #fedd53, #fcd547, #face3b, #f9c62f, #f7be20, #f6bb1a, #f6b812, #f5b508, #f5b60d, #f5b711, #f6b815, #f6b918);
+    padding: 2em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.servicios .servicio-card h4{
+    margin: 0;
+    margin-bottom: .1em;
+    text-align: center;
+    font-size: 3rem;
+    min-height: 4.5em;
+    letter-spacing: 0em;
+}
+
+.servicios .servicio-card p{
+    margin: 0;
+    margin-bottom: .1em;
+    font-size: 2rem;
+}
+
+.about-agencia{
+    background-color: var(--clr-black-light);
+    display: flex;
+    justify-content: center;
+}
+
+.about-agencia .logo{
+    margin-left: 1em;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.about-agencia .logo h2{
+    font-size: 1rem;
+}
+
+.about-agencia .logo img{
+    width: 25px;
+    height: 25px;
+}
+
+.contacto{
+    background-color: var(--clr-yellow-light);
+    background: rgb(245,179,1);
+    background: linear-gradient(90deg, rgba(245,179,1,1) 0%, rgba(254,221,83,1) 100%);
+    color: black;    
+    padding: 3em;
+    margin-top: 4em;
+}
+
+.contacto h2{
+    margin: 0;
+    text-align: center;
+    font-size: 4.625rem;
+    letter-spacing: 0em;
+    margin-bottom: .5em;
+}
+
+.contacto p{
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.contacto p span a{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #1b62e6;
+}
+
+.whatsapp-popup{
+    position: fixed;
+    bottom: 0px;
+    right: 0px; 
+    border-radius: 50%;
+    background-size: 60%;
+    background-color: #2DB742;
+    margin: 1em;
+    padding: 10px;
+    padding-bottom: 5px;
+
+    user-select: none;
+}
+
+.whatsapp-popup img{
+    height: 40px;
+    width: 40px; 
+    
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.hamburger-menu{
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    height: 100vh;
+    width: 70%;
+    top: 0;
+    right: -70%;
+    transition:all 200ms ease-in;
+    background-color: black;
+    z-index: 300;
+}
+
+.hamburger-menu ul{
+    padding: 1em;
+    padding-top: 1.5em;
+    margin: 0;
+    list-style: none;
+}
+
+.hamburger-menu ul li{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+}
+
+.hamburger-menu ul li a{
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hamburger-menu ul li:nth-child(1) img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger-menu ul li p{
+   font-size: 2rem;
+   margin:0;
+   margin-right: 30px;
+}
+
+.hamburger-menu ul li p:hover{
+    color: var(--clr-yellow);
+ }
+
+ 
+@media (max-width: 950px){
+    .navbar .items .telefono {
+        margin-left: 2em;
+    }
+
+    .navbar .items .telefono p{
+        display: none;
+    }
+
+    .about-us .about-us-text{
+        align-items: center;
+    }
+
+    .about-us .about-us-text p{
+        width: auto;
+        text-align: center;
+    }
+
+    .about-us img{
+        margin-left: 0;
+        width: auto;
+        height: 100%;
+    }
+
+    .about-us{
+        flex-direction: column;
+    }
+
+    .about-us img{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-bottom: 3em;
+    }
+
+    .about-us .about-us-text h2{
+        margin-bottom: .5em;
+    }
+
+    .about-us .about-us-text p{
+        width: fit-content;
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 770px){
+
+    .anchor{
+        top: -79px;
+    }
+
+    .navbar{
+        height: 80px;
+    }
+    .navbar .logo img{
+        width: 45px;
+        height: 45px;
+    }
+
+    .navbar .logo h2{
+        font-size: 2.7rem;
+    }
+
+    .navbar .items{
+        display: none;
+    }   
+
+    .navbar .navbar-btn{
+        display: flex;
+        margin-left: auto;
+    }
+
+    .navbar .navbar-btn img{
+        display: block;
+        height: 30px;
+        width: 30px;
+    }
+
+    .banner{
+        height: fit-content;
+        padding-top: 6em;
+    }
+    .banner p{
+        font-size: 2.5rem;
+    }
+
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4em;
+    }
+
+    .footer .logo{
+        margin-left: 0;
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+
+    .footer .direccion{
+        margin-bottom: 4em;
+    }
+
+    .footer .direccion a{
+        margin-bottom: .3em;
+    }
+
+    .servicios{
+        flex-direction: column;
+        padding-top: 3em;
+        padding: 2em;
+    }
+
+    .servicios .servicios-title h2{
+        text-align: center;
+    }
+
+    .servicios .servicio-card{
+        margin-bottom: 2em;
+        width: 100%;
+        min-height: 2em;
+    }
+
+    .servicios .servicio-card h4{
+        min-height: 3em;
+    }
+
+    .servicios .servicio-card p{
+        font-size: 1.5rem;
+    }
+
+    .servicios .servicios-cards-container{
+        flex-direction: column;
+    }
+
+    .about-us{
+        flex-direction: column;
+    }
+
+    .about-us img{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-bottom: 3em;
+    }
+
+    .about-us .about-us-text h2{
+        margin-bottom: .5em;
+    }
+
+    .about-us .about-us-text p{
+        width: fit-content;
+        margin-bottom: 1em;
+    }
+
+}
+
+.open-navbar{
+    right: 0;
+}
+
+.opacity-0{
+    opacity: 0;
+}
+
