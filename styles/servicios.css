@@ -1,0 +1,26 @@
+.container-banner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-yellow );
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+@media (max-width: 950px){
+    .bg-banner h2{
+        font-size: 8.725rem;
+    }
+}
+
+@media (max-width: 767.9px){
+   
+    .bg-banner h2{
+        font-size: 4.725rem;
+    }
+}
