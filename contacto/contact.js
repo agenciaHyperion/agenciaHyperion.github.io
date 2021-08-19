@@ -1,9 +1,20 @@
-var form = document.querySelector("#form");
+let form = document.querySelector("#form");
+let inputs = document.querySelectorAll('input');
+
 
 async function handleSubmit(event) {
     event.preventDefault();
-    var status = document.getElementById("form-status");
-    var data = new FormData(event.target);
+    let status = document.getElementById("form-status");
+    let data = new FormData(event.target);
+
+
+    for (let input of inputs) {
+        if (input.value === '') {
+            status.innerHTML = `Uno o más campos tienen un error. Por favor, revisá e intentalo de nuevo`
+            return
+        }
+    }
+
     fetch(event.target.action, {
         method: form.method,
         body: data,

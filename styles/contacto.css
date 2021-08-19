@@ -42,6 +42,10 @@ form button{
     cursor: pointer;
 }
 
+#form-status{
+    text-align: center;
+}
+
 .container-banner{
     width: 100%;
     height: 100%;
